@@ -16,16 +16,13 @@ public class OrderSpringTest {
 
     @Test
     public void testShoppingCart() {
-        // 1. 객체 생성 여부 검증
+        //null 확인
         assertNotNull(cart, "ShoppingCart 빈이 주입되지 않았습니다.");
 
-        // 2. 리스트 사이즈 검증
         assertEquals(2, cart.getProducts().size(), "상품 개수가 일치하지 않습니다.");
 
-        // 3. 첫 번째 상품 이름 검증
         assertEquals("노트북", cart.getProducts().get(0).getName());
 
-        // 4. 두 번째 상품 이름 검증
         assertEquals("스마트폰", cart.getProducts().get(1).getName());
         
         System.out.println("ShoppingCart 테스트 통과: " + cart);
